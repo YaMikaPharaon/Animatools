@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super nintendo - Game</title>
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+
+
+    <style>
+        html,
+        body,
+        pre,
+        code,
+        kbd,
+        samp {
+            font-family: "Press Start 2P";
+        }
+    </style>
+
+
+</head>
+
+<!-- CORPS DU SITE   -->
+
+<body>
+    <div id="nescss">
+        <header :class="{ sticky: scrollPos > 50 }">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="https://nostalgic-css.github.io/NES.css/">
+                        <h1><i class="snes-jp-logo brand-logo"></i> Mickaël GRAMINO</h1>
+                    </a>
+                    <p>Outil d'apprentissage du code.</p>
+                </div>
+
+                <div class="social-buttons">
+                    <p>Mes Réseaux</p>
+                    <div class="share">
+                        <a href="https://twitter.com/share?text=NES.css%EF%BD%9CNES-style%20CSS%20Framework%20%40bc_rikko&url=https://nostalgic-css.github.io/NES.css/"
+                            target="_blank"><i class="nes-icon twitter"></i></a>
+                        <a href="https://www.facebook.com/sharer.php?u=https://nostalgic-css.github.io/NES.css/&t=NES.css%EF%BD%9CNES-style%20CSS%20Framework"
+                            target="_blank"><i class="nes-icon facebook"></i></a>
+                        <a href="https://www.linkedin.com/shareArticle?url=https%3A//nostalgic-css.github.io/NES.css/&title=NES.css%EF%BD%9CNES-style%20CSS%20Framework"
+                            target="_blank"><i class="nes-icon linkedin"></i></a>
+                        <a href="https://github.com/nostalgic-css/NES.css" target="_blank"><i
+                                class="nes-icon github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <main class="main-content">
+                <a class="github-link" :class="{ active:  scrollPos < 200 }"
+                    href="https://github.com/nostalgic-css/NES.css" target="_blank" rel="noopener"
+                    @mouseover="startAnimate" @mouseout="stopAnimate">
+
+                </a>
+<br>
+                <!-- Usage -->
+                <section class="topic">
+                    <h2 id="usage"><a href="#usage">#</a>Menu principal</h2>
+                    <p>Générateur de code à true ( à trou, pardon )</p>
+
+                    <section class="showcase" v-for="sample in collection" :key="sample">
+                        <section class="nes-container with-title">
+                            <h3 class="title">Type d'excercice</h3>
+                            <div :id="sample.title" class="item" v-html="sample.code">
+                            </div>
+                            <a type="button"  class="nes-btn is-primary" href="html_excercices.html">HTML</a>
+                            <a type="button" class="nes-btn is-warning" href="css_excercices.html">CSS</a>
+                            <a type="button" class="nes-btn is-success" href="j.html">JAVASCRIPT</a>
+                        </section>
+                    </section>
+                </section>
+
+
+
+
+</body>
+<!-- Ton commentaire ici  -->
+
+</html>
